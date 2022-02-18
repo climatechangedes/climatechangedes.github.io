@@ -1,0 +1,21 @@
+img {
+    width: inherit;
+    height: inherit;
+    /* border: 2px solid red; */
+}
+
+#draw{
+    border: 2px solid red;
+}
+
+#download{
+    border: 2px solid blue;
+}
+
+#upload{
+    border: 2px solid green;
+}
+
+section{
+    margin: 20px;
+}
