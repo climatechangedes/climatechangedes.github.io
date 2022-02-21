@@ -6,24 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- p5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <!-- Back4App -->
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Spinnaker&display=swap" rel="stylesheet">
     <!-- mine -->
     <link href="style.css" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>p5</title>
 </head>
 <body>
+    <!-- Page 1 -->
+    <section id="pageOne" class="show">
+        <div id="backdrop">
+            <p id="prompt">WHAT DOES THIS SCENE LOOK LIKE IN 50 YEARS?</p>
+            <button id="start-btn">START</button>
+            <p id="responses">View all responses</p>
+        </div>
+    </section>
+    <!-- Page 2 -->
+    <section id="pageTwo" class="hidden">
+        <p>Page Two is under construction</p>
+    </section>
     <!-- Draw -->
-    <section id="draw">
+    <section class="hidden" id="draw">
         <h1>Draw</h1>
         <button id="clear" type="button">Clear</button>
     </section>
     <!-- Download -->
-    <section id="download">
+    <section class="hidden" id="download">
         <h1>Download</h1>
         <button id="save" type="button">Download</button>
     </section>
     <!-- Upload -->
-    <section id="upload">
+    <section class="hidden" id="upload">
         <h1>Upload</h1>
         <input type="file">
         <img id="preview" src="" />

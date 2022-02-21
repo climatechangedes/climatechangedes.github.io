@@ -1,11 +1,26 @@
+/* Initialize Back4App */
+Parse.initialize("ZkNDxNYhyGGfWavSo8Vj3HqwtGI7whDAuWqJ3ndu","A1UxuUSyOeNjiNMQB13YtkUQbcd9PXaM9Bo9PROI");
+Parse.serverURL = 'https://parseapi.back4app.com/';
+
+/* Page Swapping */
+const start = document.querySelector('#start-btn');
+const pageOne = document.querySelector('#pageOne');
+const pageTwo = document.querySelector('#pageTwo');
+start.addEventListener('click', function(){
+    pageOne.className = 'hidden';
+    pageTwo.className = 'show';
+})
+
+
 /* Global variables */
 var c = "white";
 let myCanvas;
 let img;
+var userImage;
 
 /* Setup */
 function preload(){
-    img = loadImage('moon1.jpg');
+    img = loadImage('/images/field.png');
 }
 function setup() {
     myCanvas = createCanvas(600, 400);
@@ -13,6 +28,7 @@ function setup() {
     background(0);
     image(img, 0, 0, 600, 400);
 }
+
 /* Draw */
 function draw() {   
     if (mouseIsPressed) {
@@ -37,14 +53,15 @@ download.addEventListener('click',function(){
     saveCanvas(myCanvas, 'myCanvas', 'jpg');
 })
 
-/* Upload Photo */
+/* Upload Photo by Alvin Agana */
 function readURL(i) {
     var reader = new FileReader();
     if (i.files && i.files[0]) {
         let res = reader.readAsDataURL(input.files[0]);
-        let j = document.querySelector("#preview");
+        let preview = document.querySelector("#preview");
         reader.addEventListener("load", function() {
-            j.src = reader.result;
+            preview.src = reader.result;
+            userImage = reader.result;
         }, false)
     }
 }
@@ -53,4 +70,21 @@ input.addEventListener("change", function() {
     readURL(this);
 })
 
-// Upload to Back4App
+/* Upload to Back4App */
+// async function run(){
+//     const result = await userImage;
+//     console.log(result);
+// }
+
+// async function run(){
+//     let myFile = fs.readFileSync('moon1.jpg').toString('base64');
+//     // let myFile = userImage.toString('base64');
+//     console.log(myFile);
+//     let myPhoto = new Parse.File('myfile.jpg', {base64: myFile});
+//     let Photo = Parse.Object.extend('Photo');
+//     let photo = new Photo();
+//     photo.set('photo', myPhoto);
+//     photo.set('name', 'Jackie');
+// }
+
+// run();
