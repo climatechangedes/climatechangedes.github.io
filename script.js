@@ -6,10 +6,18 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
 const start = document.querySelector('#start-btn');
 const pageOne = document.querySelector('#pageOne');
 const pageTwo = document.querySelector('#pageTwo');
+const back2 = document.querySelector('#back2');
+const next2 = document.querySelector('#next2');
+const pageThree = document.querySelector('#pageThree');
 start.addEventListener('click', function(){
     pageOne.className = 'hidden';
     pageTwo.className = 'show';
 })
+back2.addEventListener('click', function(){
+    pageOne.className = 'show';
+    pageTwo.classList = 'hidden';
+})
+
 
 
 /* Global variables */
@@ -37,6 +45,9 @@ function draw() {
     }
     noStroke();
 }
+// add color options
+// make download button also go next
+// one single secction for gallery view
 
 /* Clear the canvas to original state */
 const clear = document.querySelector("#clear");

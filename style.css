@@ -28,7 +28,7 @@ body, html {
 }
 
 /* Page 1 */
-#backdrop{
+#field{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,4 +65,33 @@ body, html {
     font-size: 24px;
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* Page 2 */
+#fire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/fire.jpg");
+    background-color: black;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#climateChange{
+    font-size: 48px;
+    width: 553px;
+    text-align: center;
+    color: #EF2929;
+}
+
+#information{
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 24px;
+    width: 780px;
+    text-align: center;
+    color: #FFFFFF;
 }
