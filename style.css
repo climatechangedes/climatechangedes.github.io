@@ -81,7 +81,7 @@ body, html {
     background: 
         linear-gradient(
             rgba(255, 255, 255, 0),
-            rgba(0, 0, 0, 1)
+            rgba(0, 0, 0, 0.5)
         ),
         url("images/fire.jpg");
     background-color: black;
@@ -132,22 +132,35 @@ body, html {
 
 /* Page 4 */
 #preview{
-    width: 871;
-    height: 490;
+    width: 871px;
+    height: 490px;
 }
 
 #heading4{
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     width: 265px;
-    margin-right: 80px;
+    margin-right: 60px;
     margin-top: 120px;
+    margin-left: 80px;
 }
 
 #dotted-border{
-    margin-left: 80px;
+    margin-left: 60px;
     margin-top: 120px;
     border-radius: 45px;
-    padding: 307px;
+    padding: 30px;
     border: 2px white dashed;
+    background-color: #c4c4c410;
+}
+
+/* Page 5 */
+#heading5{
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    width: 406px;
+    margin-right: 60px;
+    margin-top: 120px;
+    margin-left: 80px;
+    
 }

@@ -8,6 +8,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
     <!-- Back4App -->
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <!-- fullPage -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" integrity="sha512-TD/aL30dNLN0VaHVoh9voFlNi7ZuWQYtV4bkIJv2ulZ8mEEkZJ7IyGvDthMKvIUwzLmPONnjQlAi55HTERVXpw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,12 +55,10 @@
     <!-- Page 4 -->
     <section id="pageFour" class="hidden">
         <div class="flex-container">
-            <div>
-                <p id="heading4">PLEASE UPLOAD THE DOWNLOADED PHOTO HERE.</p>
-            </div>
+            <p id="heading4">PLEASE UPLOAD THE DOWNLOADED PHOTO HERE.</p>
             <div id="dotted-border">
                 <input type="file">
-                <img id="preview" src="" />
+                <img id="preview" src="images/empty.jpg"/>
             </div>
         </div>
         <button id="back4">back</button>
@@ -65,13 +66,17 @@
     </section>
     <!-- Page 5 -->
     <section id="pageFive" class="hidden">
-        <img src="" alt="">
-        <h1>How would you describe your image in one word?</h1>
-        <input type="text">
+        <!-- TODO: Add image later using Back4App -->
+        <div class='flex-container'>
+            <div>
+                <p id="heading5">HOW WOULD YOU DESCRIBE YOUR IMAGE IN ONE WORD?</p>
+                <input type="text">
+            </div>
+            <img src="images/empty.jpg">
+        </div>
         <button id="back5">back</button>
         <button id="next5">next</button>
     </section>
-    <!-- Add fullPage here -->
     <!-- Page 6 (Submission Gallery)-->
     <section id="pageSix" class="hidden">
         <div id="submission">
@@ -79,8 +84,8 @@
             <img src="" alt="">
             <button id="takeAction">take action</button>
         </div>
+        <button id="restart">Restart</button>
     </section>
-    <!-- Page 7 (Action)-->
     <section id="pageSeven" class="hidden">
         <h1>What can we do about it</h1>
         <div id="actionOne">
