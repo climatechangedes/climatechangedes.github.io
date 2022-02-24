@@ -7,6 +7,11 @@ body, html {
     background-color: #1D1D1D;
 }
 
+h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 .flex-container{
     display: flex;
     justify-content: center;
@@ -20,6 +25,43 @@ body, html {
 .show{
     display: block;
     height: 100%;
+}
+
+/* Darren Button Layout*/
+/* Buttons */
+.navigation {
+    width: 100%;
+    padding: 100px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Darren Button Styling*/
+.button {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.next {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-color: white;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 21px;
+}
+
+.back {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 21px;
 }
 
 /* Page 1 */
@@ -40,25 +82,22 @@ body, html {
     background-size: cover;
 }
 
-#field img {
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-}
-
 #prompt{
     font-size: 48px;
     width: 553px;
+    margin-bottom: 80px;
     text-align: center;
     color: #FFFFFF;
 }
 
 #start-btn{
     font-size: 24px;
-    padding: 20px 40px;
-    font-weight: bold;
-    background-color: #C4C4C4;
-    border-style: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: white solid;
     cursor: pointer;
 }
 
@@ -80,8 +119,8 @@ body, html {
     align-items: center;
     background: 
         linear-gradient(
-            rgba(255, 255, 255, 0),
-            rgba(0, 0, 0, 1)
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
         ),
         url("images/fire.jpg");
     background-color: black;
@@ -102,7 +141,6 @@ body, html {
     font-family: 'Spinnaker', sans-serif;
     font-size: 24px;
     width: 780px;
-    text-align: center;
     color: #FFFFFF;
 }
 
@@ -128,6 +166,12 @@ body, html {
 #draw{
     margin-top: 120px;
     margin-left: 26px;
+}
+
+#clear {
+    position: absolute;
+    right: 200px;
+    bottom: 200px;
 }
 
 /* Page 4 */
