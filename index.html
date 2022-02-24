@@ -24,20 +24,24 @@
     <!-- Page 1 -->
     <section id="pageOne" class="show">
         <div id="field">
-            <p id="prompt">WHAT DOES THIS SCENE LOOK LIKE IN 50 YEARS?</p>
-            <button id="start-btn">START</button>
+            <h1 id="prompt">What does this scene look like in 50 years?</h1>
+            <button class="button" id="start-btn">Start</button>
             <p id="responses">View all responses</p>
         </div>
     </section>
+
     <!-- Page 2 -->
     <section id="pageTwo" class="hidden">
         <div id="fire">
-            <p id="climateChange">Climate Change</p>
+            <h1 id="climateChange">Climate Change</h1>
             <p id="information">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum ac fames urna integer malesuada faucibus neque ut. Ipsum neque amet ante interdum diam senectus sollicitudin. Sagittis quis tristique leo, ornare. Cursus pharetra fames venenatis dui nulla purus vitae proin. In nam amet integer et risus. Donec ipsum non massa lacus, dictum malesuada. Turpis sed porttitor faucibus odio mattis sit urna, augue consequat. Eget amet, odio elementum enim eget ipsum cras tristique. Nec enim faucibus neque tempor proin. Sit nisl, eget faucibus diam eget vitae.</p>
-            <button id="back2">back</button>
-            <button id="next2">next</button>
+            <div class="navigation">
+                <button class="button back" id="back2">back</button>
+                <button class="button next" id="next2">next</button>
+            </div>
         </div>
     </section>
+
     <!-- Page 3 -->
     <section id="pageThree" class="hidden">
         <div class="flex-container">
@@ -48,10 +52,13 @@
             </div>
             <div id="draw"></div>
         </div>
-        <button id="clear" type="button">Clear</button>
-        <button id="back3">back</button>
-        <button id="next3">next</button>
+        <button class="button" id="clear" type="button">Clear</button>
+        <div class="navigation">
+            <button class="button back" id="back3">back</button>
+            <button class="button next" id="next3">next</button>
+        </div>
     </section>
+
     <!-- Page 4 -->
     <section id="pageFour" class="hidden">
         <div class="flex-container">
@@ -61,9 +68,12 @@
                 <img id="preview" src="images/empty.jpg"/>
             </div>
         </div>
-        <button id="back4">back</button>
-        <button id="next4">next</button>
+        <div class="navigation">
+            <button class="button back" id="back4">back</button>
+            <button class="button next"id="next4">next</button>
+        </div>
     </section>
+
     <!-- Page 5 -->
     <section id="pageFive" class="hidden">
         <!-- TODO: Add image later using Back4App -->
@@ -74,18 +84,22 @@
             </div>
             <img src="images/empty.jpg">
         </div>
-        <button id="back5">back</button>
-        <button id="next5">next</button>
+        <div class="navigation">
+            <button class="button back" id="back5">back</button>
+            <button class="button next"id="next5">next</button>
+        </div>
     </section>
     <!-- Page 6 (Submission Gallery)-->
     <section id="pageSix" class="hidden">
         <div id="submission">
             <h1>Do we want a ______ future?</h1>
             <img src="" alt="">
-            <button id="takeAction">take action</button>
+            <button class="button" id="takeAction">take action</button>
         </div>
         <button id="restart">Restart</button>
     </section>
+
+    <!-- Page 7 (Action)-->
     <section id="pageSeven" class="hidden">
         <h1>What can we do about it</h1>
         <div id="actionOne">
@@ -103,7 +117,7 @@
             <h2>Action 3</h2>
             <p>Insert a description of Action 3 here</p>
         </div>
-        <button id="backToGallery">back to gallery</button>
+        <button class="button" id="backToGallery">back to gallery</button>
     </section>
 </body>
 </html>
