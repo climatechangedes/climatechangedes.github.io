@@ -35,21 +35,70 @@
             <button id="next2">next</button>
         </div>
     </section>
-    <!-- Draw -->
-    <section class="hidden" id="draw">
-        <h1>Draw</h1>
+    <!-- Page 3 -->
+    <section id="pageThree" class="hidden">
+        <div class="flex-container">
+            <div>
+                <p id="heading3">WHAT DOES THIS SCENE LOOK LIKE IN 50 YEARS?</p>
+                <p id="instructions3">Draw over the photo.</p>
+                <p id="instructions3">Your drawing will be downloaded in the next step.</p>
+            </div>
+            <div id="draw"></div>
+        </div>
         <button id="clear" type="button">Clear</button>
+        <button id="back3">back</button>
+        <button id="next3">next</button>
     </section>
-    <!-- Download -->
-    <section class="hidden" id="download">
-        <h1>Download</h1>
-        <button id="save" type="button">Download</button>
+    <!-- Page 4 -->
+    <section id="pageFour" class="hidden">
+        <div class="flex-container">
+            <div>
+                <p id="heading4">PLEASE UPLOAD THE DOWNLOADED PHOTO HERE.</p>
+            </div>
+            <div id="dotted-border">
+                <input type="file">
+                <img id="preview" src="" />
+            </div>
+        </div>
+        <button id="back4">back</button>
+        <button id="next4">next</button>
     </section>
-    <!-- Upload -->
-    <section class="hidden" id="upload">
-        <h1>Upload</h1>
-        <input type="file">
-        <img id="preview" src="" />
+    <!-- Page 5 -->
+    <section id="pageFive" class="hidden">
+        <img src="" alt="">
+        <h1>How would you describe your image in one word?</h1>
+        <input type="text">
+        <button id="back5">back</button>
+        <button id="next5">next</button>
+    </section>
+    <!-- Add fullPage here -->
+    <!-- Page 6 (Submission Gallery)-->
+    <section id="pageSix" class="hidden">
+        <div id="submission">
+            <h1>Do we want a ______ future?</h1>
+            <img src="" alt="">
+            <button id="takeAction">take action</button>
+        </div>
+    </section>
+    <!-- Page 7 (Action)-->
+    <section id="pageSeven" class="hidden">
+        <h1>What can we do about it</h1>
+        <div id="actionOne">
+            <img src="" alt="">
+            <h2>Action 1</h2>
+            <p>Insert a description of Action 1 here</p>
+        </div>
+        <div id="actionTwo">
+            <img src="" alt="">
+            <h2>Action 2</h2>
+            <p>Insert a description of Action 2 here</p>
+        </div>
+        <div id="actionThree">
+            <img src="" alt="">
+            <h2>Action 3</h2>
+            <p>Insert a description of Action 3 here</p>
+        </div>
+        <button id="backToGallery">back to gallery</button>
     </section>
 </body>
 </html>

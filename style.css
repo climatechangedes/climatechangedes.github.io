@@ -3,18 +3,13 @@ body, html {
     margin: 0;
     font-family: 'Spinnaker', sans-serif;
     font-family: 'Oswald', sans-serif;
+    color: #FFFFFF;
+    background-color: #1D1D1D;
 }
 
-#draw{
-    border: 2px solid red;
-}
-
-#download{
-    border: 2px solid blue;
-}
-
-#upload{
-    border: 2px solid green;
+.flex-container{
+    display: flex;
+    justify-content: center;
 }
 
 /* Overlay Stuff */
@@ -33,12 +28,22 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/field.png");
-    background-color: black;
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(0, 0, 0, 0.5)
+         ),
+        url("images/field.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#field img {
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
 }
 
 #prompt{
@@ -73,7 +78,12 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/fire.jpg");
+    background: 
+        linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(0, 0, 0, 1)
+        ),
+        url("images/fire.jpg");
     background-color: black;
     height: 100%;
     background-position: center;
@@ -94,4 +104,50 @@ body, html {
     width: 780px;
     text-align: center;
     color: #FFFFFF;
+}
+
+/* Page 3 */
+#heading3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    margin-top: 120px;
+    margin-left: 100px;
+    margin-right: 26px;
+    width: 244px;
+    margin-bottom: 120px;
+}
+
+#instructions3{
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 18px;
+    margin-left: 100px;
+    margin-right: 26px;
+    width: 244px;
+}
+
+#draw{
+    margin-top: 120px;
+    margin-left: 26px;
+}
+
+/* Page 4 */
+#preview{
+    width: 871;
+    height: 490;
+}
+
+#heading4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    width: 265px;
+    margin-right: 80px;
+    margin-top: 120px;
+}
+
+#dotted-border{
+    margin-left: 80px;
+    margin-top: 120px;
+    border-radius: 45px;
+    padding: 307px;
+    border: 2px white dashed;
 }
