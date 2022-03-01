@@ -168,16 +168,20 @@ h1 {
     margin-left: 26px;
 }
 
-#clear {
-    position: absolute;
-    right: 200px;
-    bottom: 200px;
+#clear{
+    margin-left: 100px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 /* Page 4 */
 #preview{
     width: 871px;
     height: 490px;
+    display: none;
+    z-index: 2;
 }
 
 #heading4{
@@ -191,11 +195,20 @@ h1 {
 
 #dotted-border{
     margin-left: 60px;
+    display: flex;
     margin-top: 120px;
     border-radius: 45px;
+    width: 50%;
+    height: 50vh;
     padding: 30px;
     border: 2px white dashed;
     background-color: #c4c4c410;
+    justify-content: center;
+    align-items: center;
+}
+
+#upload{
+    z-index: 0;
 }
 
 /* Page 5 */
@@ -203,8 +216,26 @@ h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
     width: 406px;
-    margin-right: 60px;
-    margin-top: 120px;
-    margin-left: 80px;
+    margin-right: 79px;
+    margin-top: 178px;
+} 
 
+
+#upload{
+    margin-top: 303px;
+    width: 100%;
+    border: 5px solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: white;
+    background-color: transparent;
+    color: #EF2929;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+}
+
+#preview2{
+    margin-top: 178px;
+    margin-left: 79px;
 }

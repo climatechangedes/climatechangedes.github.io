@@ -24,6 +24,9 @@
         const next5 = document.querySelector('#next5');
         const pageSix = document.querySelector('#pageSix');
         const restart = document.querySelector('#restart');
+        const upload = document.querySelector('#upload');
+        const preview = document.querySelector("#preview");
+        const preview2 = document.querySelector('#preview2');
 
         start.addEventListener('click', function(){
             pageOne.className = 'hidden';
@@ -112,16 +115,20 @@
             var reader = new FileReader();
             if (i.files && i.files[0]) {
                 let res = reader.readAsDataURL(input.files[0]);
-                let preview = document.querySelector("#preview");
                 reader.addEventListener("load", function() {
                     preview.src = reader.result;
                     userImage = reader.result;
                 }, false)
             }
         }
+        function showUpload(){
+            upload.style.display = 'none';
+            preview.style.display = 'flex';
+        }
         let input = document.querySelector("input");
         input.addEventListener("change", function() {
             readURL(this);
+            showUpload();
         })
 
         /* fullPage */
