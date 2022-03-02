@@ -3,7 +3,7 @@
 // (function (){
     // window.addEventListener('load',function(){
         /* Initialize Back4App */
-        Parse.initialize("ZkNDxNYhyGGfWavSo8Vj3HqwtGI7whDAuWqJ3ndu","A1UxuUSyOeNjiNMQB13YtkUQbcd9PXaM9Bo9PROI");
+        Parse.initialize("gVSoN5sdIsmv2LrvqJ1kTq1vKgzyp8zXMM5ExhlI","twMcwtMlTYJvUzpnNafjrAFLB16Xo5tKB0eOmAQU");
         Parse.serverURL = 'https://parseapi.back4app.com/';
 
         /* Page Swapping */
@@ -122,7 +122,7 @@
             }
         }
         function showUpload(){
-            upload.style.display = 'none';
+            // upload.style.display = 'none'; Idk if we need this, it was hiding the input line?
             preview.style.display = 'flex';
         }
         let input = document.querySelector("input");
@@ -130,6 +130,73 @@
             readURL(this);
             showUpload();
         })
+
+        // Upload photo to Back4App Darren
+        document.querySelector('#next4').addEventListener('click', function(event){
+            event.preventDefault();
+        
+            const fileUploadControl = document.querySelector('#fileupload');
+            // this is a good place to collect data from the other fields
+            if (fileUploadControl.files.length > 0) {
+                const file = fileUploadControl.files[0];
+                const name = fileUploadControl.files[0].name;
+                const type = fileUploadControl.files[0].type;
+                const size = fileUploadControl.files[0].size;
+                if(size < 1000000 && type == 'image/jpeg' || type == 'image/png' || type == 'image/webp'){
+                  uploadPhoto(name, file);
+                } else {
+                  alert('the file is too big or is not a .jpg or .png file');
+                }
+            }
+        });
+        
+        async function uploadPhoto(name, file){
+            const newPhoto = new Parse.Object('Responses');
+            newPhoto.set('filename', name);
+            newPhoto.set('file', new Parse.File(name, file));
+            //This is a good place to save data from the other fields to the database
+            // newPhoto.set('title', document.getElementById('title').value);
+            // newPhoto.set('description', document.getElementById('description').value);
+        
+            try {
+              const result = await newPhoto.save();
+              console.log(result.id);
+              getNewPhoto(result.id);
+            } catch (error) {
+              console.error('Error while uploading the photo: ', error);
+            }
+        };
+
+        // Get photo and put on page Darren
+        async function getNewPhoto(photoId){
+          const records = Parse.Object.extend('Responses');
+          const query = new Parse.Query(records);
+          query.equalTo("objectId", photoId);
+          try{
+            const results = await query.find();
+            const photoURL = results[0].get('file').url();
+            const photoName = results[0].get('filename');
+            // This is a good place to get data from the database fields
+            // const photoTitle = results[0].get('title');
+            // const photoDescription = results[0].get('description');
+            showUploadedPhoto(photoURL);
+            // This is a good place to run a function that clears out the form, which you will write below.
+            // clearForm();
+          } catch (error) {
+              console.error('Error while getting photo', error);
+          } 
+        };
+        
+        function showUploadedPhoto(photoURL){
+          document.getElementById('preview2').src = `${photoURL}`;
+        };
+        
+        // This is a good place to write a function that clears out the form.
+        // function clearForm() {
+        //   document.getElementById('upload').reset();
+        // };
+
+
 
         /* fullPage */
         // var myFullpage = new fullpage('#fullpage', {
