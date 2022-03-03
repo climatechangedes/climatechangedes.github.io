@@ -179,6 +179,11 @@ p {
     font-size: 18px;
 }
 
+#controls{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* Page 4 */
 #preview{
     width: 871px;
