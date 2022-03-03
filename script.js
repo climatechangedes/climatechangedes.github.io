@@ -28,7 +28,9 @@
         const preview = document.querySelector("#preview");
         const preview2 = document.querySelector('#preview2');
 
-        start.addEventListener('click', function(){
+        alert('User Testing Tasks\n\n1. Draw over the image, and clear your drawing at least once\n2. Download and upload your drawing\n3. Get to the gallery view where you can see other submissions');
+
+        start.addEventListener('click', function(){            
             pageOne.className = 'hidden';
             pageTwo.className = 'show';
         })
