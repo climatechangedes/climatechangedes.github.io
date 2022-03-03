@@ -46,12 +46,14 @@
     <section id="pageThree" class="hidden">
         <div class="flex-container">
             <div>
-                <p id="heading3">WHAT DOES THIS SCENE LOOK LIKE IN 50 YEARS?</p>
-                <p id="instructions3">Draw over the photo by clicking and dragging over the photo.</p>
-                <p id="instructions3">Your drawing will be downloaded after hitting "Next".</p>
-                <button id="clear" type="button">Clear</button>
+                <h1 id="heading3">WHAT DOES THIS SCENE LOOK LIKE IN 50 YEARS?</h1>
+                <p class="instructions3">Draw over the photo by clicking and dragging over the photo.</p>
+                <p class="instructions3">Your drawing will be downloaded after hitting "Next".</p>
             </div>
-            <div id="draw"></div>
+            <div id="draw">
+                <div id="canvas"></div>
+                <button class="button" id="clear" type="button">Clear</button>
+            </div>
         </div>
         <div class="navigation">
             <button class="button back" id="back3">back</button>
@@ -62,7 +64,7 @@
     <!-- Page 4 -->
     <section id="pageFour" class="hidden">
         <div class="flex-container">
-            <p id="heading4">PLEASE UPLOAD THE DOWNLOADED PHOTO HERE.</p>
+            <h1 id="heading4">PLEASE UPLOAD THE DOWNLOADED PHOTO HERE.</h1>
             <div id="dotted-border">
                 <input type="file" id="fileupload">
                 <img id="preview" src="images/empty.jpg"/>
@@ -79,10 +81,10 @@
         <!-- TODO: Add image later using Back4App -->
         <div class='flex-container'>
             <div>
-                <p id="heading5">HOW WOULD YOU DESCRIBE YOUR IMAGE IN ONE WORD?</p>
+                <h1 id="heading5">HOW WOULD YOU DESCRIBE YOUR IMAGE IN ONE WORD?</h1>
                 <input id="upload" type="text">
             </div>
-            <img id="preview2" src="images/empty.jpg">
+            <img id="preview2" src="images/empty.jpg" width="633px">
         </div>
         <div class="navigation">
             <button class="button back" id="back5">back</button>

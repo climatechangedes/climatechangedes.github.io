@@ -89,7 +89,7 @@
         }
         function setup() {
             myCanvas = createCanvas(871, 490);
-            myCanvas.parent("draw");
+            myCanvas.parent("canvas");
             background(0);
             image(img, 0, 0, 871, 490);
         }
@@ -98,7 +98,7 @@
         function draw() {   
             if (mouseIsPressed) {
                 stroke(c);
-                strokeWeight(10);
+                strokeWeight(5);
                 line(mouseX, mouseY, pmouseX, pmouseY);
             }
             noStroke();
