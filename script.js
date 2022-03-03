@@ -80,6 +80,7 @@
         let myCanvas;
         let img;
         var userImage;
+        let brush = 5;
 
         /* Setup */
         function preload(){
@@ -96,7 +97,7 @@
         function draw() {   
             if (mouseIsPressed) {
                 stroke(c);
-                strokeWeight(5);
+                strokeWeight(brush);
                 line(mouseX, mouseY, pmouseX, pmouseY);
             }
             noStroke();
@@ -134,6 +135,20 @@
         })
         white.addEventListener('click', function(){
             c = "white";
+        })
+
+        /* Select brush thickness */
+        const small = document.querySelector('#small');
+        const medium = document.querySelector('#medium');
+        const large = document.querySelector('#large');
+        small.addEventListener('click', function(){
+            brush = 2;
+        })
+        medium.addEventListener('click', function(){
+            brush = 5;
+        })
+        large.addEventListener('click', function(){
+            brush = 8;
         })
 
         /* Clear the canvas to original state */
