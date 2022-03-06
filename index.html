@@ -11,6 +11,8 @@
     <!-- fullPage -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" integrity="sha512-TD/aL30dNLN0VaHVoh9voFlNi7ZuWQYtV4bkIJv2ulZ8mEEkZJ7IyGvDthMKvIUwzLmPONnjQlAi55HTERVXpw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,23 +52,30 @@
                 <p class="instructions3">Draw over the photo by clicking and dragging over the photo.</p>
                 <p class="instructions3">Your drawing will be downloaded after hitting "Next".</p>
             </div>
-            <div id="draw">
-                <div id="canvas"></div>
+            <div id="box">
+                <div id="draw">
+                    <div id="canvas"></div>
+                </div>
+                <div id="controls">
+                    <p id="colorsLabel">Colors:</p>
+                    <span class="dot" id="red"></span>
+                    <span class="dot" id="orange"></span>
+                    <span class="dot" id="yellow"></span>
+                    <span class="dot" id="green"></span>
+                    <span class="dot" id="blue"></span>
+                    <span class="dot" id="purple"></span>
+                    <span class="dot" id="black"></span>
+                    <span class="dot" id="white"></span>
+                    <p id="sizeLabel">Size:</p>
+                    <span class="dot" id="small"></span>
+                    <span class="dot" id="medium"></span>
+                    <span class="dot" id="large"></span>
+                    <i class="fa-solid fa-trash-can" id="clear"></i>
+                </div>
             </div>
         </div>
-        <div id="controls">
-            <button class="button" id="clear" type="button">Clear</button>
-            <button class="button" id="red" type="button">Red</button>
-            <button class="button" id="orange" type="button">Orange</button>
-            <button class="button" id="yellow" type="button">Yellow</button>
-            <button class="button" id="green" type="button">Green</button>
-            <button class="button" id="blue" type="button">Blue</button>
-            <button class="button" id="purple" type="button">Purple</button>
-            <button class="button" id="black" type="button">Black</button>
-            <button class="button" id="white" type="button">White</button>
-            <button class="button" id="small" type="button">Small</button>
-            <button class="button" id="medium" type="button">Medium</button>
-            <button class="button" id="large" type="button">Large</button>
+        <div>
+
         </div>
         <div class="navigation">
             <button class="button back" id="back3">back</button>

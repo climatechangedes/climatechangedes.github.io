@@ -87,10 +87,10 @@
             img = loadImage('images/field.jpg');
         }
         function setup() {
-            myCanvas = createCanvas(871, 490);
+            myCanvas = createCanvas(920, 517);
             myCanvas.parent("canvas");
             background(0);
-            image(img, 0, 0, 871, 490);
+            image(img, 0, 0, 920, 517);
         }
 
         /* Draw */
@@ -114,6 +114,9 @@
         const white = document.querySelector('#white');
         red.addEventListener('click', function(){
             c = "red";
+            small.style.color = c;
+            medium.style.color = c;
+            large.style.color = c;
         })
         orange.addEventListener('click', function(){
             c = "orange";
@@ -156,7 +159,7 @@
         clear.addEventListener('click', function(){
             myCanvas.clear();
             background(0);
-            image(img, 0, 0, 871, 490);
+            image(img, 0, 0, 920, 517);
         })
 
         /* Upload Photo by Alvin Agana */
