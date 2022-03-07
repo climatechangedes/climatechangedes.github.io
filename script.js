@@ -227,7 +227,6 @@
           try{
             const results = await query.find();
             const photoURL = results[0].get('file').url();
-            const photoName = results[0].get('filename');
             // This is a good place to get data from the database fields
             // const photoTitle = results[0].get('title');
             // const photoDescription = results[0].get('description');
@@ -247,6 +246,30 @@
         // function clearForm() {
         //   document.getElementById('upload').reset();
         // };
+
+        // Get all photos for gallery Darren
+        document.querySelector('#next6').addEventListener('click', getPhotos()); // not sure if this part works
+
+        async function getPhotos(){
+          const records = Parse.Object.extend('Responses');
+          const query = new Parse.Query(records);
+          try{
+            const results = await query.find();
+            results.forEach(function(photo){
+                console.log(photo);
+                // const photoURL = results[photo].get('file').url();
+                // showPhotosOnGallery(photoURL);
+            });
+            // This is a good place to run a function that clears out the form, which you will write below.
+            // clearForm();
+          } catch (error) {
+              console.error('Error while getting photo', error);
+          } 
+        };
+        
+        function showPhotosOnGallery(photoURL){
+          document.getElementById('preview2').src = `${photoURL}`;
+        };
 
 
 
