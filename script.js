@@ -21,6 +21,7 @@ const next5 = document.querySelector('#next5');
 const pageSix = document.querySelector('#pageSix');
 const takeAction = document.querySelector('#takeAction');
 const pageSeven = document.querySelector('#pageSeven');
+const restart = document.querySelector('#restart');
 const upload = document.querySelector('#upload');
 const preview = document.querySelector("#preview");
 const preview2 = document.querySelector('#preview2');
@@ -78,6 +79,10 @@ next5.addEventListener('click', showUserWord);
 takeAction.addEventListener('click', function(){
     pageSix.className = 'hidden';
     pageSeven.className = 'show';
+})
+restart.addEventListener('click', function(){
+    pageSeven.className = 'hidden';
+    pageOne.className = 'show';
 })
 
 /* Other global variables */

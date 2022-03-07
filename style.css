@@ -368,3 +368,41 @@ p {
     border: none;
     padding: 10px 20px;
 }
+
+/* Page 7 */
+#pageSevenDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+}
+
+#heading7{
+    margin: 100px;
+}
+
+#actionOne, #actionTwo, #actionThree{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 33px;
+    width: 100%;
+}
+
+.label{
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 47px;
+}
+
+.info{
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 24px;
+}
+
+#restart{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin: 53px;
+    cursor: pointer;
+}
