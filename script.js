@@ -19,7 +19,8 @@ const pageFive = document.querySelector('#pageFive');
 const back5 = document.querySelector('#back5');
 const next5 = document.querySelector('#next5');
 const pageSix = document.querySelector('#pageSix');
-const restart = document.querySelector('#restart');
+const takeAction = document.querySelector('#takeAction');
+const pageSeven = document.querySelector('#pageSeven');
 const upload = document.querySelector('#upload');
 const preview = document.querySelector("#preview");
 const preview2 = document.querySelector('#preview2');
@@ -74,9 +75,9 @@ back5.addEventListener('click', function(){
     pageFive.className = 'hidden';
 })
 next5.addEventListener('click', showUserWord);
-restart.addEventListener('click', function(){
+takeAction.addEventListener('click', function(){
     pageSix.className = 'hidden';
-    pageOne.className = 'show';
+    pageSeven.className = 'show';
 })
 
 /* Other global variables */
@@ -180,7 +181,7 @@ async function showUserWord(){
     let userWord = document.querySelector('#upload').value;
     pageFive.className = 'hidden';
     pageSix.className = 'show';
-    document.querySelector('#heading6').innerHTML = `<h1 id="heading6">Do we want a ${userWord} future?</h1>`;
+    document.querySelector('#heading6').innerHTML = `Do we want a ${userWord} future?`;
 }
 
 /* Upload Photo by Alvin Agana */

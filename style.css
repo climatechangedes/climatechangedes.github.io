@@ -340,3 +340,31 @@ p {
     margin-top: 175px;
     margin-left: 130px;
 }
+
+/* Page 6 */
+#submission{
+    display: flex;
+    justify-content: center;
+}
+
+#heading6{
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    margin: 50px;
+}
+
+#takeAction{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin-right: 100px;
+    margin-bottom: 62px;
+    background-color: #EF2929;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+}
