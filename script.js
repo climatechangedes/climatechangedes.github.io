@@ -58,8 +58,6 @@ back3.addEventListener('click', function(){
     pageThree.className = 'hidden';
 })
 next3.addEventListener('click', function(){
-    /* Save the canvas to jpg*/
-    saveCanvas(myCanvas, 'fifty-years-later', 'jpg');
     pageThree.className = 'hidden';
     pageFour.className = 'show';
 })
@@ -180,6 +178,12 @@ clear.addEventListener('click', function(){
     myCanvas.clear();
     background(0);
     image(img, 0, 0, 920, 517);
+})
+
+/* Save the canvas to jpg*/
+const download = document.querySelector('#download');
+download.addEventListener('click', function(){
+    saveCanvas(myCanvas, 'fifty-years-later', 'jpg');
 })
 
 /* Upload Photo by Alvin Agana */

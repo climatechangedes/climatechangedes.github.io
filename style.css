@@ -182,6 +182,15 @@ p {
     margin-left: 60px;
 }
 
+/* 
+Uncomment if using download icon
+download{
+    font-size: 22px;
+    cursor: pointer;
+    color: lightgray;
+    margin-left: 60px;
+} */
+
 #controls{
     display: flex;
     justify-content: flex-end;
@@ -277,6 +286,13 @@ p {
     font-family: 'Spinnaker', sans-serif;
     margin-top: 2.5px;
     margin-left: 60px;
+}
+
+#download{
+    font-family: 'Spinnaker', sans-serif;
+    margin-top: 2.5px;
+    margin-left: 60px;
+    cursor: pointer;
 }
 
 /* Page 4 */
@@ -408,5 +424,15 @@ p {
     right: 0;
     top: 50%;
     margin: 53px;
+    cursor: pointer;
+}
+
+.fa-chevron-left{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.fa-chevron-right{
+    font-size: 40px;
     cursor: pointer;
 }
