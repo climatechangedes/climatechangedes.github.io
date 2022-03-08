@@ -182,13 +182,6 @@ clear.addEventListener('click', function(){
     image(img, 0, 0, 920, 517);
 })
 
-async function showUserWord(){
-    let userWord = document.querySelector('#upload').value;
-    pageFive.className = 'hidden';
-    pageSix.className = 'show';
-    document.querySelector('#heading6').innerHTML = `Do we want a ${userWord} future?`;
-}
-
 /* Upload Photo by Alvin Agana */
 function readURL(i) {
     var reader = new FileReader();
@@ -229,8 +222,9 @@ document.querySelector('#next4').addEventListener('click', function(event){
     }
 });
 
+let newPhoto;
 async function uploadPhoto(name, file){
-    const newPhoto = new Parse.Object('Responses');
+    newPhoto = new Parse.Object('Responses');
     newPhoto.set('filename', name);
     newPhoto.set('file', new Parse.File(name, file));
     //This is a good place to save data from the other fields to the database
@@ -274,28 +268,94 @@ function showUploadedPhoto(photoURL){
 //   document.getElementById('upload').reset();
 // };
 
+// showUserWord
+async function showUserWord(){
+    let userWord = document.querySelector('#description').value;
+    pageFive.className = 'hidden';
+    pageSix.className = 'show';
+    document.querySelector('#heading6').innerHTML = `Do we want a ${userWord} future?`;
+    addWord();
+};
+
+
+// Upload description to Back4App
+// document.querySelector('#next5').addEventListener('click', function(event){
+//     event.preventDefault();
+// });
+
+async function addWord(){
+    let userWord = document.querySelector('#description').value;
+    newPhoto.set('description', userWord);
+    console.log(document.querySelector('#description').value);
+    try {
+        const result = await newPhoto.save();
+        // console.log(result.description);
+    } catch (error) {
+        console.error('Error while uploading the photo: ', error);
+    }
+};
+
+// const input = document.getElementById('description');
+// document.querySelector('#next5').addEventListener('click', function(event){
+//     event.preventDefault();
+//     addWord();
+// });
+
+// async function addWord(){
+//     const newWord = {};
+
+//     const key = input.getAttribute('name');
+//     const value = input.value;
+//     newWord[key] = value;
+
+//     if(newWord.description != ""){
+//         newPhoto.set
+//         newWordData.set('description', newWord.description);
+//         try {
+//             const result = await newWordData.save();
+//             displayWord();
+//         } catch (error) {
+//             console.error('Error while uploading word: ', error);
+//         }
+//     } else {
+//         alert('Please add a description for your image');
+//     }
+// }
+
+// async function displayWord(){
+//     const records = Parse.Object.extend('Responses');
+//     const query = new Parse.Query(records);
+//     try{
+        
+//     }
+// };
+
 // Get all photos for gallery Darren
-document.querySelector('#next6').addEventListener('click', getPhotos()); // not sure if this part works
+document.querySelector('#next5').addEventListener('click', getPhotos()); // not sure if this part works
 
 async function getPhotos(){
     const records = Parse.Object.extend('Responses');
     const query = new Parse.Query(records);
     try{
-    const results = await query.find();
-    results.forEach(function(photo){
-        console.log(photo);
-        // const photoURL = results[photo].get('file').url();
-        // showPhotosOnGallery(photoURL);
-    });
-    // This is a good place to run a function that clears out the form, which you will write below.
-    // clearForm();
+        const results = await query.find();
+        // results.forEach(function(photo){
+        //     console.log(photo);
+        //     const photoURL = results[photo].get('file').url();
+        //     showPhotosOnGallery(photoURL);
+        // });
+        for(i=0; i<results.length; i++){
+            document.querySelector('.section').innerHTML += '<div class="slide"><img class="slideImage" src="" alt="drawing on landscape photo"></div>';
+            let slideImages = document.querySelectorAll('.slideImage');
+            const photoURL = results[i].get('file').url();
+            slideImages[i].src = `${photoURL}`;
+            console.log(results[i].id);
+            // slideImages[i].className = 'show';
+        };
+        // This is a good place to run a function that clears out the form, which you will write below.
+        // clearForm();
     } catch (error) {
         console.error('Error while getting photo', error);
     } 
-};
-
-function showPhotosOnGallery(photoURL){
-    document.getElementById('preview2').src = `${photoURL}`;
 };
 
 

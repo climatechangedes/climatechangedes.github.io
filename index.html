@@ -48,7 +48,7 @@
     <section id="pageThree" class="hidden">
         <div class="flex-container">
             <div>
-                <h1 id="heading3">WHAT DOES THIS SCENE LOOK LIKE IN 50 YEARS?</h1>
+                <h1 id="heading3">With this information about climate change in mind, what do you think this scene looks like in 50 years?</h1>
                 <p class="instructions3">Draw over the photo by clicking and dragging over the photo.</p>
                 <p class="instructions3">Your drawing will be downloaded after hitting "Next".</p>
             </div>
@@ -56,7 +56,7 @@
                 <div id="draw">
                     <div id="canvas"></div>
                 </div>
-                <div id="controls">
+                <div id="controls"> <!--Add download button and don't have Next button trigger-->
                     <p id="colorsLabel">Colors:</p>
                     <span class="dot" id="red"></span>
                     <span class="dot" id="orange"></span>
@@ -104,7 +104,7 @@
         <div class='flex-container'>
             <div>
                 <h1 id="heading5">HOW WOULD YOU DESCRIBE YOUR IMAGE IN ONE WORD?</h1>
-                <input id="upload" type="text" placeholder="Enter word">
+                <input id="description" type="text" name="description" placeholder="Enter word">
             </div>
             <img id="preview2" src="images/empty.jpg" width="633px">
         </div>
@@ -115,17 +115,19 @@
     </section>
     <!-- Page 6 (Submission Gallery)-->
     <section id="pageSix" class="hidden">
-        <div id="submission">
-            <h1 id="heading6">Do we want a ______ future?</h1>
+        <h1 id="heading6">Do we want a ______ future?</h1>
+        
+        <div id="fullpage">
+            <div class="section"></div>
         </div>
-            <img src="" alt="">
-            <button class="button" id="takeAction">take action</button>
+
+        <button class="button" id="takeAction">take action</button>
     </section>
 
     <!-- Page 7 (Action)-->
     <section id="pageSeven" class="hidden">
         <div id="pageSevenDiv">
-            <h1 id="heading7">What can we do about it</h1>
+            <h1 id="heading7">What can we do about it</h1> 
             <div id="actionOne">
                 <img src="/images/empty.jpg" width="386px">
                 <div>
