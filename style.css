@@ -182,15 +182,6 @@ p {
     margin-left: 60px;
 }
 
-/* 
-Uncomment if using download icon
-download{
-    font-size: 22px;
-    cursor: pointer;
-    color: lightgray;
-    margin-left: 60px;
-} */
-
 #controls{
     display: flex;
     justify-content: flex-end;
@@ -295,6 +286,10 @@ download{
     cursor: pointer;
 }
 
+#canvas{
+    cursor: pointer;
+}
+
 /* Page 4 */
 #preview{
     width: 871px;
@@ -328,6 +323,8 @@ download{
     /* font-family: 'Spinnaker', sans-serif; */
     /* font-size: 20px; */
     text-align: center;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 /* Page 5 */
@@ -453,7 +450,7 @@ download{
 
 #fixedContainer{
     position: fixed;
-    background-color: #1D1D1D;
+    background-image: linear-gradient(to bottom, black, transparent);
     width: 100%;
     top: 0px;
 }
