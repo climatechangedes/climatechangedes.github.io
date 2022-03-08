@@ -324,6 +324,12 @@ download{
     align-items: center;
 }
 
+#fileupload{
+    /* font-family: 'Spinnaker', sans-serif; */
+    /* font-size: 20px; */
+    text-align: center;
+}
+
 /* Page 5 */
 #heading5{
     font-family: 'Oswald', sans-serif;
@@ -431,18 +437,23 @@ download{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px 20px;
-    margin-top: 75px;
+    margin-top: 205px;
 }
 
 .grid-item{
-    /* padding: 20px; */
     text-align: center;
 }
 
 #galleryContainer{
     display: flex;
     justify-content: space-between;
-    margin-top: 75px;
-    margin-right: 75px;
-    margin-left: 75px;
+    margin: 75px;
+    top: 0px;
+}
+
+#fixedContainer{
+    position: fixed;
+    background-color: #1D1D1D;
+    width: 100%;
+    top: 0px;
 }
