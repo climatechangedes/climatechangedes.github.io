@@ -73,7 +73,6 @@ back5.addEventListener('click', function(){
     pageFour.className = 'show';
     pageFive.className = 'hidden';
 })
-next5.addEventListener('click', showUserWord);
 takeAction.addEventListener('click', function(){
     pageSix.className = 'hidden';
     pageSeven.className = 'show';
@@ -334,13 +333,20 @@ async function addWord(){
 //     }
 // };
 
-// Get all photos for gallery Darren
-document.querySelector('#next5').addEventListener('click', getPhotos()); // not sure if this part works
+// Set up gallery Darren
+document.querySelector('#next5').addEventListener('click', function(){
+    getPhotos();
+    showUserWord();
+});
 
 async function getPhotos(){
-    const records = Parse.Object.extend('Responses');
-    const query = new Parse.Query(records);
+
+    console.log("buttonclicked")
+   
     try{
+        const records = Parse.Object.extend('Responses');
+        const query = new Parse.Query(records);
+
         const results = await query.find();
         // results.forEach(function(photo){
         //     console.log(photo);
