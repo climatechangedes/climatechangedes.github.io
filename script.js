@@ -44,6 +44,8 @@ start.addEventListener('click', function(){
 responses.addEventListener('click', function(){
     pageOne.className = 'hidden';
     pageSix.className = 'show';
+    getPhotos();
+    showUserWord();
 })
 back2.addEventListener('click', function(){
     pageOne.className = 'show';
