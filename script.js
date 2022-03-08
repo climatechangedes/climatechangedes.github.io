@@ -36,6 +36,7 @@ const blue = document.querySelector('#blue');
 const purple = document.querySelector('#purple');
 const black = document.querySelector('#black');
 const white = document.querySelector('#white');
+let fetachedImage = false;
 
 start.addEventListener('click', function(){            
     pageOne.className = 'hidden';
@@ -44,8 +45,11 @@ start.addEventListener('click', function(){
 responses.addEventListener('click', function(){
     pageOne.className = 'hidden';
     pageSix.className = 'show';
-    getPhotos();
-    showUserWord();
+    if(!fetachedImage){
+        getPhotos();
+        showUserWord();
+    }
+    fetachedImage = true;
 })
 back2.addEventListener('click', function(){
     pageOne.className = 'show';
@@ -337,8 +341,10 @@ async function addWord(){
 
 // Set up gallery Darren
 document.querySelector('#next5').addEventListener('click', function(){
-    getPhotos();
-    showUserWord();
+    if(!fetachedImage){
+        getPhotos();
+        showUserWord();
+    }
 });
 
 async function getPhotos(){
@@ -356,7 +362,7 @@ async function getPhotos(){
         //     showPhotosOnGallery(photoURL);
         // });
         for(i=0; i<results.length; i++){
-            document.querySelector('.section').innerHTML += '<div class="slide"><img class="slideImage" src="" alt="drawing on landscape photo"></div>';
+            document.querySelector('.grid-container').innerHTML += '<div class="grid-item"><img class="slideImage" src="" alt="drawing on landscape photo"></div>';
             let slideImages = document.querySelectorAll('.slideImage');
             const photoURL = results[i].get('file').url();
             slideImages[i].src = `${photoURL}`;
