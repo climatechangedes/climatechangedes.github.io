@@ -3,7 +3,7 @@ Parse.initialize("gVSoN5sdIsmv2LrvqJ1kTq1vKgzyp8zXMM5ExhlI","twMcwtMlTYJvUzpnNaf
 Parse.serverURL = 'https://parseapi.back4app.com/';
 
 /* Page Swapping */
-const start = document.querySelector('#start-btn');
+const start = document.querySelector('#start');
 const responses = document.querySelector('#responses');
 const pageOne = document.querySelector('#pageOne');
 const pageTwo = document.querySelector('#pageTwo');
@@ -100,10 +100,10 @@ function preload(){
     img = loadImage('images/field.jpg');
 }
 function setup() {
-    myCanvas = createCanvas(920, 517);
+    myCanvas = createCanvas(890, 500);
     myCanvas.parent("canvas");
     background(0);
-    image(img, 0, 0, 920, 517);
+    image(img, 0, 0, 890, 500);
 }
 
 /* Draw */
@@ -182,7 +182,7 @@ const clear = document.querySelector("#clear");
 clear.addEventListener('click', function(){
     myCanvas.clear();
     background(0);
-    image(img, 0, 0, 920, 517);
+    image(img, 0, 0, 890, 500);
 })
 
 /* Save the canvas to jpg*/
@@ -282,7 +282,7 @@ async function showUserWord(){
     let userWord = document.querySelector('#description').value;
     pageFive.className = 'hidden';
     pageSix.className = 'show';
-    document.querySelector('#heading6').innerHTML = `Do we want a ${userWord} future?`;
+    document.querySelector('#heading6').innerHTML = `Do we want a <span id="userWord">${userWord}</span> future?`;
     addWord();
 };
 
@@ -354,7 +354,7 @@ async function getPhotos(){
     try{
         const records = Parse.Object.extend('Responses');
         const query = new Parse.Query(records);
-
+        query.descending('createdAt');
         const results = await query.find();
         // results.forEach(function(photo){
         //     console.log(photo);

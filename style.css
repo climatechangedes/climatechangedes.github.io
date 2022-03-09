@@ -19,6 +19,11 @@ h1 {
 p {
     margin-bottom: 20px;
     line-height: 1.5em;
+    font-family: 'Spinnaker', sans-serif;
+}
+
+a {
+    color: white;
 }
 
 .flex-container{
@@ -100,14 +105,14 @@ p {
     color: #FFFFFF;
 }
 
-#start-btn{
+#start{
     font-size: 24px;
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: 500;
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
-    border: white solid;
+    border: 1px white solid;
     cursor: pointer;
 }
 
@@ -133,6 +138,7 @@ p {
             rgba(0, 0, 0, 0.7)
         ),
         url("images/fire.jpg");
+        /* Photo by <a href="https://unsplash.com/@fjones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fabian Jones</a> on <a href="https://unsplash.com/s/photos/forest-fire?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
     background-color: black;
     height: 100%;
     background-position: center;
@@ -149,10 +155,13 @@ p {
 }
 
 #information{
-    font-family: 'Spinnaker', sans-serif;
     font-size: 24px;
     width: 780px;
     color: #FFFFFF;
+}
+
+#attribute{
+    font-size: 12px;
 }
 
 /* Page 3 */
@@ -184,8 +193,9 @@ p {
 
 #controls{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 20px;
+    z-index: 1;
 }
 
 #box{
@@ -243,7 +253,7 @@ p {
 }
 
 #small{
-    background-color: black;
+    background-color: gray;
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -251,7 +261,7 @@ p {
 }
 
 #medium{
-    background-color: black;
+    background-color: gray;
     cursor: pointer;
     height: 20px;
     width: 20px;
@@ -259,7 +269,7 @@ p {
 }
 
 #large{
-    background-color: black;
+    background-color: gray;
     cursor: pointer;
     height: 30px;
     width: 30px;
@@ -270,7 +280,7 @@ p {
 #colorsLabel{
     font-family: 'Spinnaker', sans-serif;
     margin-top: 2.5px;
-    margin-left: 60px;
+    margin-left: 50px;
 }
 
 #sizeLabel{
@@ -280,14 +290,21 @@ p {
 }
 
 #download{
-    font-family: 'Spinnaker', sans-serif;
-    margin-top: 2.5px;
-    margin-left: 60px;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-left: 100px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px white solid;
     cursor: pointer;
 }
 
 #canvas{
     cursor: pointer;
+    /* width: 890px;
+    margin: 0; */
 }
 
 /* Page 4 */
@@ -309,7 +326,7 @@ p {
     margin-left: 120px;
     display: flex;
     margin-top: 120px;
-    border-radius: 45px;
+    border-radius: 30px;
     width: 50%;
     height: 50vh;
     padding: 30px;
@@ -319,12 +336,18 @@ p {
     align-items: center;
 }
 
-#fileupload{
-    /* font-family: 'Spinnaker', sans-serif; */
-    /* font-size: 20px; */
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px white solid;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Page 5 */
@@ -350,6 +373,7 @@ p {
     font-size: 48px;
     z-index: 0;
     text-align: center;
+    text-transform: uppercase;
 }
 
 #preview2{
@@ -366,6 +390,10 @@ p {
 #heading6{
     color: #FFFFFF;
     font-size: 36px;
+}
+
+#userWord{
+    color: #EF2929;
 }
 
 .slideImage {

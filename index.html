@@ -27,7 +27,7 @@
     <section id="pageOne" class="show">
         <div id="field">
             <h1 id="prompt">What does this scene look like in 50 years?</h1>
-            <button class="button" id="start-btn">Start</button>
+            <button class="button" id="start">Start</button>
             <p id="responses">View all responses</p>
         </div>
     </section>
@@ -36,7 +36,11 @@
     <section id="pageTwo" class="hidden">
         <div id="fire">
             <h1 id="climateChange">Climate Change</h1>
-            <p id="information">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum ac fames urna integer malesuada faucibus neque ut. Ipsum neque amet ante interdum diam senectus sollicitudin. Sagittis quis tristique leo, ornare. Cursus pharetra fames venenatis dui nulla purus vitae proin. In nam amet integer et risus. Donec ipsum non massa lacus, dictum malesuada. Turpis sed porttitor faucibus odio mattis sit urna, augue consequat. Eget amet, odio elementum enim eget ipsum cras tristique. Nec enim faucibus neque tempor proin. Sit nisl, eget faucibus diam eget vitae.</p>
+            <div id="information">
+                <p>Global Temperature Increase: Within the last 40 years, the last 7 years had the highest average surface temperature. 2016 and 2020 are tied for the warmest years on record.<br><br>More Natural Disasters: As a result of climate change, hurricanes, droughts, and flooding are expected to only intensify.<br><br>Rising Sea Levels: Although sea levels since 1880 have only risen 8 inches, they are projected to increase 1-8 feet by 2100.
+                
+                <p id="attribute">Source: <a href="https://climate.nasa.gov/effects/">NASA Global Climate Change Vital Signs of the Planet</a></p>
+            </div>
             <div class="navigation">
                 <i class="fa-solid fa-chevron-left" id="back2"></i>
                 <i class="fa-solid fa-chevron-right" id="next2"></i>
@@ -48,8 +52,8 @@
     <section id="pageThree" class="hidden">
         <div class="flex-container">
             <div>
-                <h1 id="heading3">What do you think this scene looks like in 50 years?</h1>
-                <p class="instructions3">With this information about climate change in mind, draw over the photo by clicking and dragging over the photo.</p>
+                <h1 id="heading3">What does this scene looks like in 50 years?</h1>
+                <p class="instructions3">With this information about climate change in mind, draw your response over the photo by clicking and dragging.</p>
                 <p class="instructions3">Please download your photo before proceeding.</p>
             </div>
             <div id="box">
@@ -72,7 +76,7 @@
                     <span class="dot" id="large"></span>
                     <i class="fa-solid fa-trash-can" id="clear"></i>
                     <!-- <i class="fa-solid fa-arrow-down-to-line" id="download"></i> font awesome pro?-->
-                    <p id="download">Download</p>
+                    <button class="button" id="download">Download</button>
                 </div>
             </div>
         </div>
@@ -90,7 +94,11 @@
         <div class="flex-container">
             <h1 id="heading4">PLEASE UPLOAD THE DOWNLOADED PHOTO HERE.</h1>
             <div id="dotted-border">
+                <label for="fileupload" class="custom-file-upload">
+                    UPLOAD IMAGE
+                </label>
                 <input type="file" id="fileupload" class="button">
+                
                 <img id="preview" src="images/empty.jpg"/>
             </div>
         </div>
@@ -106,7 +114,7 @@
         <div class='flex-container'>
             <div>
                 <h1 id="heading5">HOW WOULD YOU DESCRIBE YOUR IMAGE IN ONE WORD?</h1>
-                <input id="description" type="text" name="description" placeholder="Enter word">
+                <input id="description" type="text" name="description" placeholder="ENTER WORD">
             </div>
             <img id="preview2" src="images/empty.jpg" width="633px">
         </div>
