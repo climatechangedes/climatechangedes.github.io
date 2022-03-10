@@ -448,6 +448,12 @@ input[type="file"] {
     cursor: pointer;
 }
 
+#restart1{
+    margin-right: 80px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
 .fa-chevron-left{
     font-size: 40px;
     cursor: pointer;

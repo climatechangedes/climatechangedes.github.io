@@ -22,6 +22,7 @@ const pageSix = document.querySelector('#pageSix');
 const takeAction = document.querySelector('#takeAction');
 const pageSeven = document.querySelector('#pageSeven');
 const restart = document.querySelector('#restart');
+const restart1 = document.querySelector('#restart1');
 const upload = document.querySelector('#upload');
 const preview = document.querySelector("#preview");
 const preview2 = document.querySelector('#preview2');
@@ -85,6 +86,10 @@ takeAction.addEventListener('click', function(){
 })
 restart.addEventListener('click', function(){
     pageSeven.className = 'hidden';
+    pageOne.className = 'show';
+})
+restart1.addEventListener('click', function(){
+    pageSix.className = 'hidden';
     pageOne.className = 'show';
 })
 
