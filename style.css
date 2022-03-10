@@ -11,7 +11,7 @@ h1, h2, p {
     margin: 0;
 }
 
-h1 {
+h1, h2 {
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -412,28 +412,38 @@ input[type="file"] {
 }
 
 /* Page 7 */
-#pageSevenDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#pageSeven{
     font-family: 'Oswald', sans-serif;
     font-size: 36px;
+    background-color: #FFFFFF;
+    color: black;
+    height: 100%;
+}
+
+#pageSevenDiv{
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    background-color: #FFFFFF;
+    color: black;
 }
 
 #heading7{
-    margin: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    padding-top: 50px;
 }
 
 #actionOne, #actionTwo, #actionThree{
     display: flex;
-    justify-content: space-evenly;
-    margin: 33px;
-    width: 100%;
+    margin-left: auto;
+    margin-bottom: 100px;
+    width: 80%;   
+    align-items: center;
 }
 
 .label{
     font-family: 'Oswald', sans-serif;
-    margin-bottom: 47px;
+    margin-bottom: 10px;
 }
 
 .info{
@@ -441,17 +451,34 @@ input[type="file"] {
     font-size: 24px;
 }
 
+.infoContainer{
+    margin-left: 200px;
+}
+
 #restart{
     position: fixed;
     right: 0;
-    top: 50%;
-    margin: 53px;
+    bottom: 60px;
+    padding-right: 70px;
+    padding-top: 70px;
+    color: black;
+    font-size: 40px;
     cursor: pointer;
 }
 
 #restart1{
     margin-right: 80px;
     font-size: 40px;
+    cursor: pointer;
+}
+
+#back7{
+    bottom: 60px;
+    left: 0;
+    position: fixed;
+    padding-left: 70px;
+    padding-top: 70px;
+    color: black;
     cursor: pointer;
 }
 
@@ -488,4 +515,24 @@ input[type="file"] {
     background-image: linear-gradient(to bottom, black, transparent);
     width: 100%;
     top: 0px;
+}
+
+#lightbulb{
+    font-size: 100px;
+    color: #1BCB6C;
+}
+
+#recycle{
+    font-size: 70px;
+    color: #1BCB6C;
+}
+
+#bag{
+    font-size: 78px;
+    color: #1BCB6C;
+}
+
+#sectionCenter{
+    margin: auto;
+    width: 80%;
 }

@@ -37,6 +37,7 @@ const blue = document.querySelector('#blue');
 const purple = document.querySelector('#purple');
 const black = document.querySelector('#black');
 const white = document.querySelector('#white');
+const back7 = document.querySelector('#back7');
 let fetachedImage = false;
 
 start.addEventListener('click', function(){            
@@ -95,6 +96,10 @@ restart.addEventListener('click', function(){
 restart1.addEventListener('click', function(){
     pageSix.className = 'hidden';
     pageOne.className = 'show';
+})
+back7.addEventListener('click', function(){
+    pageSeven.className = 'hidden';
+    pageSix.className = 'show';
 })
 
 /* Other global variables */
@@ -293,6 +298,7 @@ function showUploadedPhoto(photoURL){
 // showUserWord
 async function showUserWord(){
     let userWord = document.querySelector('#description').value;
+    if (userWord == "") userWord = "___";
     pageFive.className = 'hidden';
     pageSix.className = 'show';
     document.querySelector('#heading6').innerHTML = `Do we want a <span id="userWord">${userWord}</span> future?`;
