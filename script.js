@@ -65,8 +65,12 @@ back3.addEventListener('click', function(){
     pageThree.className = 'hidden';
 })
 next3.addEventListener('click', function(){
-    pageThree.className = 'hidden';
-    pageFour.className = 'show';
+    if(!downloadedOnce){
+        alert('Please download the image');
+    } else{
+        pageThree.className = 'hidden';
+        pageFour.className = 'show';
+    }
 })
 back4.addEventListener('click', function(){
     pageThree.className = 'show';
@@ -191,9 +195,11 @@ clear.addEventListener('click', function(){
 })
 
 /* Save the canvas to jpg*/
+let downloadedOnce = false;
 const download = document.querySelector('#download');
 download.addEventListener('click', function(){
     saveCanvas(myCanvas, 'fifty-years-later', 'jpg');
+    downloadedOnce = true;
 })
 
 /* Upload Photo by Alvin Agana */
