@@ -420,6 +420,12 @@ p {
     cursor: pointer;
 }
 
+#restart1{
+    font-size: 40px;
+    margin-right: 80px;
+    cursor: pointer;
+}
+
 .fa-chevron-left{
     font-size: 40px;
     cursor: pointer;
