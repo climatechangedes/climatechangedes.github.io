@@ -214,7 +214,9 @@ function readURL(i) {
     }
 }
 function showUpload(){
-    // upload.style.display = 'none'; Idk if we need this, it was hiding the input line?
+    upload.style.display = 'none';
+    document.querySelector('#dotted-border').style.backgroundColor = 'transparent';
+    document.querySelector('#dotted-border').style.border = 'none';
     preview.style.display = 'flex';
 }
 let input = document.querySelector("input");
