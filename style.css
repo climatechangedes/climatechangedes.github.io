@@ -196,6 +196,7 @@ a {
     justify-content: space-between;
     margin-top: 20px;
     z-index: 1;
+    align-items: center;
 }
 
 #box{
@@ -279,13 +280,13 @@ a {
 
 #colorsLabel{
     font-family: 'Spinnaker', sans-serif;
-    margin-top: 2.5px;
+    margin-top: 16px;
     margin-left: 50px;
 }
 
 #sizeLabel{
     font-family: 'Spinnaker', sans-serif;
-    margin-top: 2.5px;
+    margin-top: 16px;
     margin-left: 60px;
 }
 
