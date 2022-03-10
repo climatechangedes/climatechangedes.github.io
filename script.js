@@ -3,7 +3,7 @@ Parse.initialize("gVSoN5sdIsmv2LrvqJ1kTq1vKgzyp8zXMM5ExhlI","twMcwtMlTYJvUzpnNaf
 Parse.serverURL = 'https://parseapi.back4app.com/';
 
 /* Page Swapping */
-const start = document.querySelector('#start-btn');
+const start = document.querySelector('#start');
 const responses = document.querySelector('#responses');
 const pageOne = document.querySelector('#pageOne');
 const pageTwo = document.querySelector('#pageTwo');
@@ -22,7 +22,6 @@ const pageSix = document.querySelector('#pageSix');
 const takeAction = document.querySelector('#takeAction');
 const pageSeven = document.querySelector('#pageSeven');
 const restart = document.querySelector('#restart');
-const restart1 = document.querySelector('#restart1');
 const upload = document.querySelector('#upload');
 const preview = document.querySelector("#preview");
 const preview2 = document.querySelector('#preview2');
@@ -88,10 +87,6 @@ restart.addEventListener('click', function(){
     pageSeven.className = 'hidden';
     pageOne.className = 'show';
 })
-restart1.addEventListener('click', function(){
-    pageSix.className = 'hidden';
-    pageOne.className = 'show';
-})
 
 /* Other global variables */
 var c = '#1D1D1D';
@@ -105,10 +100,10 @@ function preload(){
     img = loadImage('images/field.jpg');
 }
 function setup() {
-    myCanvas = createCanvas(920, 517);
+    myCanvas = createCanvas(890, 500);
     myCanvas.parent("canvas");
     background(0);
-    image(img, 0, 0, 920, 517);
+    image(img, 0, 0, 890, 500);
 }
 
 /* Draw */
@@ -187,7 +182,7 @@ const clear = document.querySelector("#clear");
 clear.addEventListener('click', function(){
     myCanvas.clear();
     background(0);
-    image(img, 0, 0, 920, 517);
+    image(img, 0, 0, 890, 500);
 })
 
 /* Save the canvas to jpg*/
@@ -287,7 +282,7 @@ async function showUserWord(){
     let userWord = document.querySelector('#description').value;
     pageFive.className = 'hidden';
     pageSix.className = 'show';
-    document.querySelector('#heading6').innerHTML = `Do we want a ${userWord} future?`;
+    document.querySelector('#heading6').innerHTML = `Do we want a <span id="userWord">${userWord}</span> future?`;
     addWord();
 };
 
@@ -359,7 +354,7 @@ async function getPhotos(){
     try{
         const records = Parse.Object.extend('Responses');
         const query = new Parse.Query(records);
-
+        query.descending('createdAt');
         const results = await query.find();
         // results.forEach(function(photo){
         //     console.log(photo);
